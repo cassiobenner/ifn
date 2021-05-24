@@ -1,7 +1,8 @@
 from django.shortcuts import render
 
+
 def index(request):
-   context = {
+    context = {
         'curso': 'curso de django freamwork',
         'outro': 'outro curso'
     }
@@ -9,4 +10,4 @@ def index(request):
 
 
 def contato(request):
-    return render(render, 'contato.html')
+    return render(request, 'contato.html')
