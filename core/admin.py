@@ -1,21 +1,14 @@
 from django.contrib import admin
-from core.models import Book
-
+from import_export.admin import ImportExportModelAdmin
 from .models import Produto, Cliente
 
 
-class ProdutoAdmin(admin.ModelAdmin):
+class ProdutoAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = ('nome', 'preco', 'estoque')
 
 
-class ClienteAdmin(admin.ModelAdmin):
+class ClienteAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = ('nome','sobrenome','email')
-
-
-class BookResource(admin.ModelResource):
-
-    class Meta:
-        model = Book
 
 
 admin.site.register(Produto, ProdutoAdmin)

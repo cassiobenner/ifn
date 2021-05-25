@@ -125,3 +125,10 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
+IMPORT_EXPORT_TMP_STORAGE_CLASS = 'import_export.tmp_storages.TempFolderStorage'
+IMPORT_EXPORT_EXPORT_PERMISSION_CODE = None
+IMPORT_EXPORT_CHUNK_SIZE = 100
+
