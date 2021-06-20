@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Produto</title>
+</head>
+<body>
+<h1>Exibir o produto</h1>
+<a href="{% url 'index' %}">Retornar para a pagina inicial</a>
+
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Preco</th>
+        <th>Estoque</th>
+    </tr>
+
+    <tr>
+        <td>   <p>  {{produto.nome}} </a></p></td>
+         <td>   <p> {{produto.preco}} </p></td>
+          <td>   <p> {{produto.estoque}} </p></td>
+
+    </tr>
+
+
+</table>
+
+
+</body>
+</html>

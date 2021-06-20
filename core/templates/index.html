@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>index</title>
 </head>
 <body>
 indexxx
-<h2> {{ curso }}  </h2>
+<h2> {{ curso }}</h2>
 
 <p> {{ outro }} </p>
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Preco</th>
+    </tr>
+    {% for produto in produtos  %}
+    <tr>
+        <td><a href="{% url 'produto' produto.id %}"> {{produto.nome}} </a></td>
+         <td> {{produto.preco}}</td>
 
+    </tr>
+    {% endfor  %}
+
+</table>
 </body>
 </html>
