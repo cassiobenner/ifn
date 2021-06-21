@@ -1,10 +1,14 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 <head>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
     <meta charset="UTF-8">
     <title>index</title>
+
 </head>
 <body>
+<img src="{% static 'images/logo.png' %}"
 indexxx
 <h2> {{ curso }}</h2>
 
@@ -23,5 +27,9 @@ indexxx
     {% endfor  %}
 
 </table>
+
+<button onclick="teste();">alerta</button>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </body>
+
 </html>
